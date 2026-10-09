@@ -9,6 +9,9 @@ export class Project2App {
     this.page = page;
   }
 
+  /**
+   * Lazy initialization of Project 2 LoginPage class container instance.
+   */
   get loginPage(): Project2LoginPage {
     if (!this._loginPage) {
       this._loginPage = new Project2LoginPage(this.page);

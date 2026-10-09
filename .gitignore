@@ -1,0 +1,23 @@
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Build and compilation outputs
+dist/
+build/
+*.tsbuildinfo
+
+# Playwright specific artifacts
+test-results/
+playwright-report/
+blob-report/
+playwright/.local-browsers/
+
+# Local configuration and secret files
+.env
+.env.local
+.env.*.local
+
+# Operating system metadata caches
+.DS_Store
+Thumbs.db
