@@ -1,0 +1,14 @@
+{
+  "name": "playwright-pom-framework",
+  "version": "1.0.0",
+  "description": "Multi-project Playwright framework with Lazy Loading and POM",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.40.0",
+    "dotenv": "^16.3.1",
+    "typescript": "^5.3.3"
+  }
+}
