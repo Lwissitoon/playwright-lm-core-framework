@@ -3,9 +3,9 @@ dotenv.config();
 
 export const EnvConfig = {
   project1: {
-    url: process.env.P1_URL || 'https://example.com/p1/login',
-    user: process.env.P1_USER || 'user_p1@test.com',
-    pass: process.env.P1_PASS || 'PasswordP1!',
+    url: process.env.P1_URL || 'https://practicetestautomation.com/practice-test-login/',
+    user: process.env.P1_USER || 'student',
+    pass: process.env.P1_PASS || 'Password123',
   },
   project2: {
     url: process.env.P2_URL || 'https://automationexercise.com/login',

@@ -3,15 +3,26 @@
   "version": "1.0.0",
   "description": "Multi-team Playwright POM Framework with Hybrid Fixtures and Lazy Loading",
   "main": "index.js",
-  "scripts": {
-    "test": "playwright test"
+    "scripts": {
+    "test": "playwright test",
+    "clear:reports": "rimraf allure-results allure-report",
+    
+    "test:project2:all": "npm run clear:reports && npx playwright test --project=project_2_anonymous --project=project_2_auth",
+    "test:project2:anonymous": "npm run clear:reports && npx playwright test --project=project_2_anonymous",
+    "test:project2:auth": "npm run clear:reports && npx playwright test --project=project_2_auth",
+    
+    "report:generate": "allure generate allure-results --clean -o allure-report",
+    "report:open": "allure open allure-report"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.49.0",
+    "allure-commandline": "^2.32.0",
+    "allure-playwright": "^3.0.7",
     "dotenv": "^16.4.5",
+    "rimraf": "^6.0.1",
     "typescript": "^5.0.0"
   }
 }

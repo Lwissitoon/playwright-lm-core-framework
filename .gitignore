@@ -1,23 +1,33 @@
-# Dependency directories
+# Node dependencies
 node_modules/
 jspm_packages/
 
-# Build and compilation outputs
+# TypeScript compilation output
 dist/
 build/
 *.tsbuildinfo
 
-# Playwright specific artifacts
+# Playwright core test artifacts
 test-results/
 playwright-report/
 blob-report/
 playwright/.local-browsers/
 
-# Local configuration and secret files
+# Allure Report generated directories and raw data caches
+allure-results/
+allure-report/
+.allure/
+
+# Strictly secure application state session files
+# This blocks your generated cookies from being pushed to Git
+src/storage/*.json
+!src/storage/.gitkeep
+
+# Environment variable configurations and secret keys
 .env
 .env.local
 .env.*.local
 
-# Operating system metadata caches
+# Operating System temporary metadata caches
 .DS_Store
 Thumbs.db

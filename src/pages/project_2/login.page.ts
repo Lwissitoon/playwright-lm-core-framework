@@ -7,7 +7,7 @@ export class Project2LoginPage extends BasePage {
   }
 
   // Strict Lazy Loading Locators via TypeScript Getters
-  private get emailField(): Locator { return this.page.locator('[data-qa="login-email"]'); }
+  public get emailField(): Locator { return this.page.locator('[data-qa="login-email"]'); }
   private get passwordField(): Locator { return this.page.locator('[data-qa="login-password"]'); }
   private get submitButton(): Locator { return this.page.locator('[data-qa="login-button"]'); }
   
