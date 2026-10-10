@@ -9,7 +9,7 @@ export const EnvConfig = {
   },
   project2: {
     url: process.env.P2_URL || 'https://automationexercise.com/login',
-    user: process.env.P2_USER || 'user_p2@test.com',
-    pass: process.env.P2_PASS || 'PasswordP2!',
+    user: process.env.P2_USER || 'a29852@gmail.com',
+    pass: process.env.P2_PASS || 'avenaquaker',
   }
 };

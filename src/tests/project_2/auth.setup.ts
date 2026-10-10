@@ -13,7 +13,7 @@ setup('Authenticate Project 2 Environment Session', async ({ page }) => {
   await app.loginPage.login(EnvConfig.project2.user, EnvConfig.project2.pass);
   
   // 2. Wait for full verification of post-auth state (dashboard redirect)
-  await page.waitForURL(/.*dashboard.*/);
+  await page.waitForURL(/.*automationexercise.*/);
 
   // 3. Dump cookies and localStorage states securely to disk
   await page.context().storageState({ path: './src/storage/project_2_auth.json' });
