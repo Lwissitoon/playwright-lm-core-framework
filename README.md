@@ -1,11 +1,7 @@
 ========================================================================
-PLAYWRIGHT MULTI-PROJECT TEST AUTOMATION FRAMEWORK
-========================================================================
+# Playwright Multi-Project Test Automation Framework
 
-A production-grade, enterprise-ready automation boilerplate engineered
-for multi-team scaling. This framework implements a strict Page Object
-Model (POM) with Lazy Loading Locators, Hybrid Test Fixtures, optional
-Storage State Management (Session Isolation), and Allure Reporting.
+A production-grade, enterprise-ready automation boilerplate engineered for multi-team scaling. This framework implements a strict **Page Object Model (POM)** with **Lazy Loading Locators**, **Hybrid Test Fixtures**, optional **Storage State Management (Session Isolation)**, and **Allure Reporting**.
 
 ------------------------------------------------------------------------
 ARCHITECTURE DESIGN
@@ -32,37 +28,38 @@ simultaneously.
 ------------------------------------------------------------------------
 REPOSITORY STRUCTURE
 ------------------------------------------------------------------------
-playwright-hybrid-fixtures-framework/
-├── .allure/                     # Allure core configuration assets
+```text
+playwright-lm-core-framework/
+├── .allure/                        # Allure core configuration assets
 ├── src/
 │   ├── config/
-│   │   └── env.config.ts        # Dynamic environment controls & variables
+│   │   └── env.config.ts           # Dynamic environment controls & variables
 │   ├── fixtures/
-│   │   └── global.fixture.ts    # System core universal fixture layer
+│   │   └── global.fixture.ts       # System core universal fixture layer
 │   ├── helpers/
-│   │   └── common.helpers.ts    # Globally shared utility classes
+│   │   └── common.helpers.ts       # Globally shared utility classes
 │   ├── pages/
-│   │   ├── base.page.ts         # Encapsulated resilient browser controls
-│   │   └── project_2/           # Team 2 Application Element repository
+│   │   ├── base.page.ts            # Encapsulated resilient browser controls
+│   │   └── project_2/              # Team 2 Application Element repository
 │   │       ├── login.page.ts
-│   │       └── p2.factory.ts    # Lazy Page Object instantiation barrel
+│   │       └── p2.factory.ts       # Lazy Page Object instantiation barrel
 │   ├── storage/
-│   │   └── .gitkeep             # Ignored tracking directory for auth cookies
+│   │   └── .gitkeep                # Ignored tracking directory for auth cookies
 │   └── tests/
-│       └── project_2/           # Team 2 Testing Context
+│       └── project_2/              # Team 2 Testing Context
 │           ├── data/
-│           │   └── login.data.ts # Split Data Matrix Providers
-│           ├── anonymous/       # Tests running without session tokens (Clean Browser)
+│           │   └── login.data.ts    # Split Data Matrix Providers
+│           ├── anonymous/          # Tests running without session tokens (Clean Browser)
 │           │   └── login-failures.spec.ts
-│           ├── auth/            # Tests executing inside logged-in dashboard profiles
+│           ├── auth/               # Tests executing inside logged-in dashboard profiles
 │           │   └── dashboard.spec.ts
-│           ├── auth.setup.ts    # Unique setup worker mapping auth checkpoints
-│           └── project2.fixture.ts # Extended project-level fixture connector
-├── .gitignore                   # Prevents local cache, states, and report tracking leaks
-├── package.json                 # Project dependencies, scripts, and runtime engines
-├── playwright.config.ts          # Central configuration containing segmented Project profiles
-└── tsconfig.json                # TypeScript project execution guidelines
-
+│           ├── auth.setup.ts       # Unique setup worker mapping auth checkpoints
+│           └── project2.fixture.ts  # Extended project-level fixture connector
+├── .gitignore                      # Prevents local cache, states, and report tracking leaks
+├── package.json                    # Project dependencies, scripts, and runtime engines
+├── playwright.config.ts            # Central configuration containing segmented Project profiles
+└── tsconfig.json                   # TypeScript project execution guidelines
+```
 ------------------------------------------------------------------------
 SETUP & INSTALLATION
 ------------------------------------------------------------------------
